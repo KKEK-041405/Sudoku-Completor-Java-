@@ -2,6 +2,8 @@ package Sudoku;
 
 import java.util.ArrayList;
 import javax.swing.*;
+import javax.swing.border.Border;
+
 import java.awt.*;
 
 public class Block extends JComponent {
@@ -42,7 +44,7 @@ public class Block extends JComponent {
         int textHeight = metrics.getHeight();
         int x = (getWidth() - textWidth) / 2;
         int y = (getHeight() - textHeight) / 2 + metrics.getAscent();
-
+        setBorder(BorderFactory.createLineBorder(Color.black));
         g.drawString(text, x, y);
     }
 

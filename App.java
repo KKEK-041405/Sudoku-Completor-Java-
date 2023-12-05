@@ -3,12 +3,17 @@ import Test.write;
 import UI.UI;
 
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         System.out.println("enter the rows in sudoku");
+        // creating new sudoku
         Sudoko sudoko = new Sudoko();
 
+        // initlizing the user interface
         new UI(sudoko.blocks);
-        sudoko.Verify();
+        // sloving the sudoku
+        sudoko.slove();
+
+        // printing the sloved sudoku
         write.writedata(sudoko.blocks);
     }
 }

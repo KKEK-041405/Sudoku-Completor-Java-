@@ -4,11 +4,11 @@ import Sudoku.Block;
 
 public class write {
     public static void writedata(Block[][] Data) {
-        for (Block[] row : Data) {
-            for (Block block : row) {
-                System.out.print(block.number + " ");
-                System.out.println(block.hints);
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                System.out.print(Data[i][j].number + " ");
             }
+            System.out.println();
         }
     }
 }
